@@ -50,7 +50,7 @@ Five numbered follow-up questions:
 
 Rules: Use **bold** for key terms. NO emojis except the five section headers. NO markdown headers (##). Clean prose. No filler.`;
 
-  const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:streamGenerateContent?alt=sse&key=${apiKey}`;
+  const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:streamGenerateContent?alt=sse&key=${apiKey}`;
 
   const geminiRes = await fetch(geminiUrl, {
     method: 'POST',
