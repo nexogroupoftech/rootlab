@@ -1,0 +1,58 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #040608;
+  --panel: #0a0f14;
+  --border: #0e1a24;
+  --border2: #152030;
+  --border3: #1c2d3f;
+  --text: #c8dce8;
+  --text-dim: #6a8a9a;
+  --text-faint: #2a4050;
+  --accent: #00e5ff;
+  --accent2: #00ff9d;
+  --accent3: #7b61ff;
+  --red: #ff4d6d;
+  --yellow: #ffd166;
+  --mono: 'Space Mono', monospace;
+  --display: 'Orbitron', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,229,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,229,255,0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.04) 2px, rgba(0,0,0,0.04) 4px);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+input, select, button { font-family: inherit; }
+
+input:focus, select:focus { outline: none; }
+
+* { scrollbar-width: thin; scrollbar-color: var(--border3) transparent; }
